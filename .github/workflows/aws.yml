@@ -24,7 +24,7 @@ jobs:
           
     - name: Deploy na EC2
       run: |
-           echo "${{secrets.KEY_EC2_E}}" >private_key && chmod 400 private_key
+           echo "${{secrets.UBOI_KEY}}" >private_key && chmod 400 private_key
            ssh -i "UboiKey.pem" ubuntu@ec2-3-82-21-179.compute-1.amazonaws.com "
                      cd /home/ubuntu/POC &&
                      git pull &&
